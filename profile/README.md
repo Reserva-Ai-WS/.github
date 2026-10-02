@@ -1,105 +1,77 @@
 <div align="center">
+  
+# Reserva Aí
 
-# 📅 RESERVA AÍ
-
-### WEG Room, Tablet and Notebook Booking — all in one place
-
-*No more email chains, scattered spreadsheets, or scheduling clashes.*
+Reserva Aí is a web system for booking the CentroWEG rooms and lending out notebooks and tablets. It is built for the WEG and SENAI teams.
 
 </div>
 
----
+## The problem
 
-## 🎯 About the project
+Right now, scheduling is done by hand and spread across emails and spreadsheets. This causes double bookings and time conflicts in the rooms, and it makes it hard to know who currently has a given notebook or tablet, which puts the equipment at risk.
 
-**RESERVA AÍ** is a web system that centralizes and simplifies the booking of **CentroWEG rooms** and the lending of **notebooks** and **tablets**, used by the **WEG** and **SENAI** teams.
+## What it solves
 
-With it, the room and the equipment are reserved in a single request, and everyone can instantly see what is available.
+The system puts everything in one place. Someone can book a room and reserve the equipment they need in the same request, see what is free right away, and check who has each device and when it is due back. The goal is to cut down on manual work and miscommunication, and to keep better control over WEG's assets.
 
-## 🧩 The problem
+## Who uses it
 
-Scheduling today is manual and decentralized, which leads to:
-
-- ⚠️ Time conflicts and duplicate room bookings
-- 🔍 Difficulty tracking **who has** each notebook and tablet
-- 🔐 Risks to asset security and control
-- 📧 Heavy manual work, communication failures, and data loss
-
-## 💡 Delivered value
-
-- ✅ No more time clashes or duplicate bookings
-- ✅ Instant visibility of what is available
-- ✅ Tracking of who holds each device and when it is due back
-- ✅ Less rework for the team and stronger control over assets
-- ✅ Room and equipment secured in the same request
-
-## 👥 Who uses it
-
-> Students are **not** registered in the system.
+Students are not registered in the system.
 
 | Profile | What they can do |
 |---|---|
-| **WEG team** | Register and book CentroWEG rooms, manage notebooks, headphones, and tablets, and track who holds the equipment. Gives the **final approval** on room bookings. |
-| **SENAI team** | Book CentroWEG rooms and manage tablets (registration, removal, and availability). |
-| **SENAI instructors** | Request rooms (reviewed first by the Manager) and request tablets and notebooks when needed. |
-| **Manager** | Reviews, approves, or denies the room requests made by instructors, and can give a reason for a denial. |
-| **Administrator** | Registers, searches, edits, removes (reversible within 30 days), and manages all users. |
+| WEG team | Register and book CentroWEG rooms, manage notebooks, headphones and tablets, and track who has the equipment. Gives the final approval on room bookings. |
+| SENAI team | Book CentroWEG rooms and manage tablets (registration, removal and availability). |
+| SENAI instructors | Request rooms, which are reviewed by the Manager first, and request tablets and notebooks when needed. |
+| Manager | Reviews the room requests made by instructors, approves or denies them, and can give a reason when denying. |
+| Administrator | Registers, searches, edits and removes users (removal can be undone within 30 days). |
 
-## 🛠️ Technologies
+## Technologies
 
-### Backend
-- **Spring Boot** — chosen framework
-- **Event-Driven Microservices** — Room, Tablet, Notebook, and Notifications
-- **Apache Kafka** — event streaming between services
-- **SSE (Server-Sent Events)** — automatic server-to-frontend updates
-- **MVC + TDD** — Domain-Driven Development + Test-Driven Development
-- **Spring Security** — OAuth2 + JWT + Google Sign-In
-- **AWS DynamoDB** — NoSQL database
+**Backend**
+- Spring Boot
+- Event-driven microservices: Room, Tablet, Notebook and Notifications
+- Apache Kafka
+- Server-Sent Events (SSE) to push updates from the server to the frontend
+- MVC with Domain-Driven Development and Test-Driven Development
+- Spring Security with OAuth2, JWT and Google Sign-In
+- AWS DynamoDB
 
-### Frontend
-- **Next.js**
-- **React**
-- **TypeScript**
-- **TailwindCSS**
+**Frontend**
+- Next.js
+- React
+- TypeScript
+- TailwindCSS
 
-### Tools
-- **WebStorm** — Frontend IDE
-- **IntelliJ IDEA** — Backend IDE
-- **pnpm** — package manager
+**Tools**
+- WebStorm (frontend) and IntelliJ IDEA (backend)
+- pnpm
+- Kanban board on GitHub Projects
 
-### Project management
-- **Kanban** on GitHub Projects
+## Room approval flows
 
-## 🔄 Room approval flows
+Room requests follow one of two paths, depending on who makes them.
 
-There are two approval flows, depending on who makes the request.
-
-**SENAI instructors** — the request goes through the Manager before reaching WEG:
+Requests from SENAI instructors go through the Manager before reaching WEG:
 
 ```
-Instructor requests  →  Manager reviews  →  WEG gives final approval  →  User is notified
+Instructor -> Manager -> WEG (final approval) -> User is notified
 ```
 
-**WEG and SENAI teams** — the request goes straight to WEG:
+Requests from the WEG and SENAI teams go straight to WEG:
 
 ```
-WEG / SENAI team requests  →  WEG gives final approval  →  User is notified
+WEG / SENAI team -> WEG (final approval) -> User is notified
 ```
 
-## 👨‍💻 Team
+## Team
 
-| Name |
-|---|
-| Enzo Venturi |
-| Gabriel Behling |
-| Luigi Barbieri Lombardo |
-| Murilo Heitor Joly |
-| Vinicius Zick |
-
----
+- Enzo Venturi
+- Gabriel Behling
+- Luigi Barbieri Lombardo
+- Murilo Heitor Joly
+- Vinicius Zick
 
 <div align="center">
-
-Made with 💙 by the **Reserva-Ai-WS** team
-
+Made with ❤️ by the Reserva Aí team!!!
 </div>
