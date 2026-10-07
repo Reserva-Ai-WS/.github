@@ -31,11 +31,11 @@ Students are not registered in the system.
 **Backend**
 - Spring Boot
 - Event-driven microservices: Room, Tablet, Notebook and Notifications
-- Apache Kafka
+- RabbitMQ + Cloud AMQP
 - Server-Sent Events (SSE) to push updates from the server to the frontend
-- MVC with Domain-Driven Development and Test-Driven Development
-- Spring Security with OAuth2, JWT and Google Sign-In
-- AWS DynamoDB
+- MVC with Test-Driven Development
+- Spring Security with OAuth2 and JWT
+- AWS Aurora PostgreSQL
 
 **Frontend**
 - Next.js
